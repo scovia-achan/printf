@@ -22,7 +22,7 @@ int is_printable(char c)
  * Return: 3
  */
 
-int append_hex_code(char ascii_code, char buffer[], int i)
+int append_hexa_code(char ascii_code, char buffer[], int i)
 {
 	char map_to[] = "0123456789ABCDEF";
 
