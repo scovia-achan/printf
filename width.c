@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * width - handles width for non-custome conversion specifiers
+ * get_width - handles width for non-custome conversion specifiers
  *@format: formatted string
  *@i: arguments
  *@list: list of arguments
@@ -10,7 +10,7 @@
  * This function handles the field width for non-custom specifiers
  */
 
-int width(const char *format, int *i, va_list list)
+int get_width(const char *format, int *i, va_list list)
 {
 	int curr_i;
 	int width = 0;

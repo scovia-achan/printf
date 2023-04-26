@@ -7,7 +7,7 @@
 * @buffer: Buffer array to handle print
 * @flags: calculates active flags
 * @width: width
-* @precision specification
+* @precision: precision specification
 * @size: size specifier
 * Return: number of chars printed
 */
