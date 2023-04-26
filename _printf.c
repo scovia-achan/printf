@@ -8,7 +8,7 @@ void print_buffer(char buffer[], int *buff_ind);
 * @format: format
 * Return: printed chars
 */
-int _printf(cont char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
@@ -42,7 +42,7 @@ int _printf(cont char *format, ...)
 			printed_chars += printed;
 		}
 	}
-	printed_buffer(buffer, &buff_ind);
+	print_buffer(buffer, &buff_ind);
 	va_end(list);
 	return (printed_chars);
 }

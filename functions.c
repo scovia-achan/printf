@@ -1,4 +1,4 @@
-#incude "main.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -43,7 +43,7 @@ int print_string(va_list types, char buffer[], int flags,
 	{
 		str = "(null)";
 		if (precision >= 6)
-			str = "  ";
+			str = "      ";
 	}
 	while (str[length] != '\0')
 		length++;
@@ -55,13 +55,13 @@ int print_string(va_list types, char buffer[], int flags,
 		{
 			write(1, &str[0], length);
 			for (i = width - length; i > 0; i--)
-				write(1, "", 1);
+				write(1, " ", 1);
 			return (width);
 		}
 		else
 		{
 			for (i = width - length; i > 0; i--)
-				write(1, "", 1);
+				write(1, " ", 1);
 			write(1, &str[0], length);
 			return (width);
 		}
@@ -105,7 +105,7 @@ int print_int(va_list types, char buffer[], int flags, int width,
 {
 	int i = BUFF_SIZE - 2;
 	int is_negative = 0;
-	long int n = va_arg(types, long int)
+	long int n = va_arg(types, long int);
 	unsigned long int num;
 
 	n = convert_size_number(n, size);
